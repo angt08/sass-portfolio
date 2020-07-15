@@ -1,11 +1,11 @@
 @import 'config';
 @import 'home';
-
+@import 'menu';
 
 
 body{
   background:$primary-color;
-  color:#fff;
+  color:set-text-color($primary-color);
   height: 100vh;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 1;
@@ -16,7 +16,7 @@ h1,h2,h3 {
 }
 
 a{
-  color:#fff;
+  color:set-text-color($primary-color);
   text-decoration: none;
 }
 header {
@@ -35,11 +35,12 @@ main{
     bottom: 1rem;
     left:1rem;
 
-    a{
+    a {
       padding:0.4rem;
+      @include transition-ease;
 
-      &:hover{
-        color: $secondary-color;
+      &:hover {
+        color:$secondary-color;
       }
     }
   }
@@ -48,8 +49,9 @@ main{
 footer{
   font-size: 1rem;
   position: fixed;
+  bottom:0.4rem;
   right: 1rem;
   text-align: right;
   padding:1rem;
-  color: #fff;
+  color:set-text-color($primary-color);
 }
