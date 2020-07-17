@@ -1,7 +1,7 @@
 @import 'config';
 @import 'home';
 @import 'menu';
-
+@import 'about';
 
 body{
   background:$primary-color;
@@ -25,7 +25,9 @@ header {
   width: 100%;
   padding:1rem;
 }
-
+.text-secondary{
+  color:$secondary-color;
+}
 main{
   height: 100%;
   width: 100%;
